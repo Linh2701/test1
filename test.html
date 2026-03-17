@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			margin: 0 auto;
+			width: 80%;
+			font-family: arial;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		header{
+			width: 100%;
+			height: 200px;
+			background-color: blue;
+		}
+		header img{
+			width: 20%;
+			height: 200px;
+			float: left;
+		}
+		header h2{
+			padding-top: 100px;
+			text-align: center;
+			font-size: 2em;
+			color: yellow;
+		}
+		#content{
+			width: 100%;
+			height: 700px;
+		}
+		nav{
+			width: 100%;
+			height: 30px;
+			background-color: yellow;
+		}
+		nav ul li{
+			list-style-type: none;
+			border-right: 1px solid red;float: left;
+		}
+		nav ul li a{
+			text-decoration: none;
+			font-size: 1.5em;
+			padding: 20px 20px;
+		}
+		nav ul li:hover{
+			background-color: red;
+		}
+		nav ul li a:hover{
+			color: blue;
+		}
+		#left{
+			width: 20%;
+			height: 670px;
+			background-color: lightgray;
+			float: left;
+			line-height: 2;
+		}
+		h3{
+			text-align: center;
+			padding-top: 20px;
+		}
+		#left ul li{
+			list-style-type: none;
+		}
+		#left ul li a{
+			text-decoration: none;
+			padding-left: 30px;
+		}
+		section{
+			width: 60%;
+			height: 670px;
+			background-color: lightpink;
+			float: left;
+		}
+		article{
+			padding: 10px;
+			margin: 10px;
+		}
+		#NNT{
+			border: 1px solid red;
+			width: 45%;
+			float: left;
+		}
+		#KD{
+			border: 1px solid red;
+			width: 45%;
+			float: right;
+		}
+		#KD2{
+			border: 1px solid red;
+			float: left;
+			width: 45%;
+		}
+		#HH{
+			border: 1px solid red;
+			float: right;
+			width: 45%;
+		}
+		#right{
+			width: 20%;
+			height: 670px;
+			float: right;
+			background-color: #CCAB;
+			text-align: center;
+			line-height: 2;
+		}
+		h4{
+			text-align: center;
+		}
+		footer{
+			width: 100%;
+			height: 100px;
+			background-color: lightblue;
+		}
+		footer h3{
+			text-align: center;
+			padding-top: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		function kiemtra(){
+			ten=document.getElementById("ten").value;
+			email=document.getElementById("email").value;
+			if(ten.length==0)
+				ht1="Cần điền tên đăng nhập";
+			else
+				ht1="";
+			if(email.length==0)
+				ht2="Cần điền email";
+			else
+				ht2="";
+			document.getElementById("ht1").innerHTML=ht1;
+			document.getElementById("ht2").innerHTML=ht2;
+			document.getElementById("htkq").innerHTML=kq;
+		}
+		function test(){
+			tim=document.getElementById("tim").value;
+			if(tim==0)
+				tk1="Cần điền tên đăng nhập";
+			else if(tim=='thành công'||'thanhcong')
+				tk1="tìm thấy 3 kq";
+			else
+				tk1="k tìm thấy";
+			document.getElementById("tk1").innerHTML=tk1;
+			//document.getElementById("tk2").innerHTML=tk2;
+			document.getElementById("hkq").innerHTML=kq;
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<img src="images.png">
+		<h2>Vượt qua thời gian, đập tan thử thách</h2>
+	</header>
+	<div id="content">
+		<nav>
+			<ul><li><a href="#"> Trang chủ</a></li>
+				<li><a href="#"> Giới thiệu</a></li>
+				<li><a href="#"> Quyền riêng tư</a></li>
+				<li><a href="#"> Điều khiển và bản quyền</a></li>
+			</ul>
+		</nav>
+		<aside id="left">
+			<h3>Chủ đề danh ngôn</h3>
+			<ul>
+				<li><a href="#">Danh ngôn cuộc sống </a></li>
+				<li><a href="#">Danh ngôn gia đình </a></li>
+				<li><a href="#">Danh ngôn giáo dục </a></li>
+				<li><a href="#">Danh ngôn tình bạn </a></li>
+			</ul>
+			<label for="tim"></label>
+		<input type="text" name="tim" id="tim" autofocus required >
+		<div id="tk1"></div>
+		<//div id="tk2"><//div>
+		<input type="button" name="timkiem" value="tìm kiếm" onclick="test();">
+		<div id="hkq"></div>
+		</aside>
+		<section>
+			<article id="NNT">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h4>Tác giả: Nguyễn Ngọc Thạch</h4>
+			</article>
+			<article id="KD">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h4>Tác giả: Nguyễn Ngọc Thạch</h4>
+			</article>
+			<article id="KD2">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h4>Tác giả: Nguyễn Ngọc Thạch</h4>
+			</article>
+			<article id="HH">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</article>
+		</section>
+	</div>
+</body>
+</html>
